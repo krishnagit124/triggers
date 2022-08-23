@@ -1,8 +1,12 @@
 pipeline{
-  agent any
-    stages{
-       steps('build'){
-          sh 'echo "thos is naveen buld"'
+    agent any
+       stages{
+          stage("BUILD"){
+            steps{
+               sh 'echo "this is naveen build"'
+	    }
+	  }
        }
-    }
-}
+
+
+  }
