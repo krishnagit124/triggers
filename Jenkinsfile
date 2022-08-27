@@ -1,22 +1,27 @@
 pipeline{
-    agent {
-         node{
-	      label 'silver'
-                  stages{
-                         stage("TEST"){
-		                    steps{
-                                         sh 'hostname'
-			                     sh 'pwd'
-					     }
-					     }
-		 }
-                   
+     agent {label 'silver'}
+       stages{
+            stage('build'){
+                  steps{
+                          sh 'hostname'
+			  sh 'pwd'
+                       
+		  }
+               
 
 	    }
 
 
+    
 
-	}
+
+       }
+
+
+
+
+
+
 
 
 }
