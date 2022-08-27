@@ -3,10 +3,20 @@ pipeline{
        stages{
           stage("BUILD"){
             steps{
-               sh 'echo "this is naveen build"'
-	       sh 'echo "this is for testsing"'
-	       sh 'echo "this is for trigger test"'
-	       sh 'echo "this is for trigger test"'
+	              script{
+
+                               def name = "naveen_krishna"
+
+			       if ( name == "naveen_krishna" )
+			       		echo "hi $(name)"
+				else
+			             echo "pora"
+				
+				echo "end of script"	
+                        
+
+
+		      }
 	    }
 	  }
        }
