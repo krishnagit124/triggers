@@ -1,17 +1,26 @@
-pipeline {
+pipeline{
     agent any
-
-    stages{
-        stage("just test"){
+        stages{
+            stage("TEST"){
 		steps{
-                         mvn --version
-		}	
-                    
-		    }
+			tools{
+				maven 'maven_3_5.2'			
+			}	
+			
+		}
+		steps{
 
-            }
+                     sh 'mvn --version'
 
-        }
-        
-    }
+		}
+
+                   
+
+	    }
+
+
+
+	}
+
+
 }
