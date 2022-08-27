@@ -4,7 +4,7 @@ pipeline{
             stage("TEST"){
 		steps{
 			tools{
-				maven 'maven_3_5.2'			
+				maven 'MVN'			
 			}	
 			
 		}
