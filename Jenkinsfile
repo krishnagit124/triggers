@@ -4,10 +4,14 @@ pipeline{
             stage("TEST"){
 		steps{
 
-                     sh 'mvn --version'
-
+                      tools{
+                           maven 'MVN2'
+                         
+		      }
 		}
-
+                 steps{
+                        sh 'mvn --version'
+		 }
                    
 
 	    }
