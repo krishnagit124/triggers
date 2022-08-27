@@ -1,27 +1,19 @@
-pipeline{
+pipeline {
     agent any
-       stages{
-          stage("BUILD"){
+
+    stages{
+        stage("just test"){
             steps{
-	              script{
+                    timeout(time: 1, unit: 'SECONDS'){
+                        echo "sleeping in timieour"
+                        sleep 2
 
-                               def name = "naveen_krishna"
+                    }
 
-			       if ( name == "naveen_krishna" )
-			       		echo "hi ${name}"
-				else
-			             echo "pora"
-				
-				echo "end of script"	
-                        
+            }
 
-
-		      }
-	    }
-	  }
-       }
-
-
-  }
-
+        }
+        
+    }
+}
 
