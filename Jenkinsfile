@@ -5,7 +5,7 @@ pipeline {
         stage("just test"){
             steps{
 	                tools{
-                                maven 'maven_3.8.6'
+                                maven 'MVN'
                            
 
 			}
@@ -21,5 +21,3 @@ pipeline {
         
     }
 }
-
-
