@@ -4,10 +4,16 @@ pipeline {
     stages{
         stage("just test"){
             steps{
-                    timeout(time: 1, unit: 'MINUTES'){
-                        echo "sleeping in timieour"
-                        sleep 2
-                    }
+	                tools{
+                                maven 'maven_3.8.6'
+                           
+
+			}
+		steps{
+                         mvn --version
+		}	
+                    
+		    }
 
             }
 
