@@ -8,7 +8,7 @@ pipeline{
                                def name = "naveen_krishna"
 
 			       if ( name == "naveen_krishna" )
-			       		echo "hi $(name)"
+			       		echo "hi ${name}"
 				else
 			             echo "pora"
 				
