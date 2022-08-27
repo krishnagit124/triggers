@@ -1,16 +1,10 @@
 pipeline{
-    agent any
+    agent silver
         stages{
             stage("TEST"){
 		steps{
-
-                      tools{
-                           maven 'MVN2'
-                         
-		      }
-		}
-                 steps{
-                        sh 'mvn --version'
+                        sh 'hostname'
+			sh 'pwd'
 		 }
                    
 
